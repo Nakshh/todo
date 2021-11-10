@@ -1,6 +1,7 @@
 <template>
     <div id="app">
-        <h1>Just a completely unstyled Todo List</h1>
+        <h1>No Fancy Features Just Do your Work</h1>
+        <h1 id="date-time"></h1>
         <form @submit.prevent="addNewTodo()">
             <input v-model="todo" placeholder="Add new todo" />
             <input type="submit" />
@@ -16,6 +17,10 @@
 </template>
 
 <script>
+
+var dt = new Date();
+document.getElementById("date-time").innerHTML=dt;
+
 export default {
     name: "App",
     data() {
